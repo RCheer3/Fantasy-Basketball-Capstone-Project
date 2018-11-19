@@ -12,6 +12,17 @@ def rank_players(df):
     return value_copy
 
 
+'''
+Format Database:
+This gathers all of the queries needed to do any data manipulation to the basketball reference data.
+
+It first loads in the files, then creates many different tables based on what features are important for each individual category.
+
+The intermediate tables are used to store players career data and teammates data so that we can use that information to predict what a players future statistics will be.
+
+'''
+
+
 
 conn = pg2.connect(dbname = 'postgres',host='localhost')
 conn.autocommit = True
