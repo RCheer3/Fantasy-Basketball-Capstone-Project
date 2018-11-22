@@ -1,0 +1,15 @@
+<html>
+
+<head>
+  <title> Player Rankings </title>
+  <!-- this is a stylesheet referencing other file home.css -->
+  <link rel='stylesheet' href='static/home.css' />
+</head>
+
+<body>
+  {%for basketball in players%}
+  <li>{{players.player}} {{basketball.season}} {{basketball.player}} {{basketball.predicted_rank}} {{basketball.points}} {{basketball.rebounds}} {{basketball.assists}} {{basketball.steals}} {{basketball.blocks}} {{basketball.turnovers}} {{basketball.threes}}  {{basketball.FGM}}  {{basketball.FGA}} {{basketball.FTM}}  {{basketball.FTA}}</li>
+  {% endfor %}
+
+</body>
+</html>

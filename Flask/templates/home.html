@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title> Home Page </title>
+  <!-- this is a stylesheet referencing other file home.css -->
+  <link rel='stylesheet' href='static/home.css' />
+</head>
+
+
+
+<body>
+  <img src="https://i2.wp.com/4.bp.blogspot.com/-7sUbtVjO5Js/Uh4_s3TCdPI/AAAAAAAAAKo/0qAUIMGd65A/s1600/fantasy-basketball.gif" />
+  <h1 id='HomeHeader'> Fantasy Basketball 9-Category League Predictions </h1>
+  <p id='HomeHeader2'>This website can get you ready for the draft, let you know whether or not a trade is fair</p>
+  <u1>
+    <li>
+      <a href='http://www.espn.com/fantasy/basketball/'> ESPN Fantasy Basketball </a>
+    </li>
+  </u1>
+
+  <span style="font-weight: bold;"> 2018-19 Season Predicted Stats </span>
+
+  {%for basketball in players%}
+  <li>{{players.player}} {{basketball.player}}: [ Predicted Rank: {{basketball.predicted_rank}}, Pts: {{basketball.points}}, Reb: {{basketball.rebounds}}, Ast: {{basketball.assists}}, Stl:{{basketball.steals}}, Blk:{{basketball.blocks}}, TO:{{basketball.turnovers}}, 3PM:{{basketball.threes_made}}, FGM:{{basketball.FGM}}, FGA:{{basketball.FGA}}, FTM:{{basketball.FTM}}, FTA:{{basketball.FTA}} ]</li>
+  {% endfor %}
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.35.2/plotly.min.js"></script>
+<!--Need to load jquery before referencing the static/mpg.js file since that file will be running jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
