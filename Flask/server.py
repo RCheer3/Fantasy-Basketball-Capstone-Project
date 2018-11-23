@@ -8,7 +8,7 @@ import psycopg2 as pg2
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://rcheer:SacKings3@localhost/nba_capstone'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://@localhost/nba_capstone'
 db = SQLAlchemy(app)
 
 class predictions(db.Model):
