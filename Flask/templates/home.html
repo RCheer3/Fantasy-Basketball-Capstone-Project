@@ -21,7 +21,7 @@
   <span style="font-weight: bold;"> 2018-19 Season Predicted Stats </span>
 
   {%for basketball in players%}
-  <li>{{players.player}} {{basketball.player}}: [ Predicted Rank: {{basketball.predicted_rank}}, Pts: {{basketball.points}}, Reb: {{basketball.rebounds}}, Ast: {{basketball.assists}}, Stl:{{basketball.steals}}, Blk:{{basketball.blocks}}, TO:{{basketball.turnovers}}, 3PM:{{basketball.threes_made}}, FGM:{{basketball.FGM}}, FGA:{{basketball.FGA}}, FTM:{{basketball.FTM}}, FTA:{{basketball.FTA}} ]</li>
+  <li>{{players.player}} {{basketball.player}}: [ Predicted Rank: {{basketball.predicted_rank}}, Pts: {{basketball.points}}, Reb: {{basketball.rebounds}}, Ast: {{basketball.assists}}, Stl:{{basketball.steals}}, Blk:{{basketball.blocks}}, TO:{{basketball.turnovers}}, 3PM:{{basketball.threes_made}}, Field Goal Percentage:{{basketball.fg_percent}}, Free Throw Percentage:{{basketball.ft_percent}}]</li>
   {% endfor %}
 
 

@@ -24,10 +24,9 @@ class predictions(db.Model):
     blocks = db.Column(db.Float)
     turnovers = db.Column(db.Float)
     threes_made = db.Column(db.Float)
-    FGM = db.Column(db.String(4),unique=False)
-    FGA = db.Column(db.String(4),unique=False)
-    FTM = db.Column(db.String(4),unique=False)
-    FTA = db.Column(db.String(4),unique=False)
+    fg_percent = db.Column(db.Float)
+    ft_percent = db.Column(db.Float)
+
 
     def __init(self,season,player,predicted_rank,points,rebounds,assists,steals,blocks,turnovers,threes_made,FGM,FGA,FTM,FTA):
         self.season  = season
@@ -40,10 +39,9 @@ class predictions(db.Model):
         self.blocks  =  blocks
         self.turnovers  =  turnovers
         self.threes_made  =  threes_made
-        self.FGM  =  FGM
-        self.FGA  =  FGA
-        self.FTM  =  FTM
-        self.FTA  =  FTA
+        self.fg_percent  =  fg_percent
+        self.ft_percent  =  ft_percent
+
 
 
 
